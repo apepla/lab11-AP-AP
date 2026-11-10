@@ -1,20 +1,25 @@
 import math
 
-def add(a, b): a + b
+def add(a, b):
+    return a + b
 
-def subtract(a, b): a - b
+def subtract(a, b):
+    return a - b
 
-def multiply(a, b): a * b
+def multiply(a, b):
+    return a * b
 
 def divide(a, b):
-    b / a
-# raise ZeroDivisionError if a == 0
+    if a == 0:
+        raise ZeroDivisionError("Division by zero is not allowed (denominator 'a' cannot be zero).")
+    return b / a
 
 def logarithm(a, b):
+    if a <= 0 or a == 1:
+        raise ValueError("Logarithm base 'a' must be greater than 0 and not equal to 1.")
+    if b <= 0:
+        raise ValueError("Logarithm argument 'b' must be greater than 0.")
+    return math.log(b, a)
 
-    math.log(b, a)
-
-def exponent(a, b): a ** b
-
-
-
+def exponent(a, b):
+    return a ** b
