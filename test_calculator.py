@@ -37,7 +37,7 @@ class TestCalculator(unittest.TestCase):
 
     def test_log_invalid_base(self):
         with self.assertRaises(ValueError):
-            log(1, 10)
+            log(1, 0)
 
 # use same technique from test_divide_by_zero
     #     fill in code
